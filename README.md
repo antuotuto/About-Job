@@ -1,1 +1,1 @@
-# Day-md
+# Daymd
