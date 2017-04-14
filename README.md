@@ -1,15 +1,18 @@
 # Daily
 
-**[Google][1]** 找到我
+**[Google][1]** Google前端必备的开发工具
 
-> 2017 04 13
+> 2017 04 13 `1` 
 
 **这个是一个开始** 所以我们要好好的对待
 
 ```
-  function(){
-    an();
-  }
+  <script>
+      an();
+      function an(){
+        document.write('王安安');
+      }
+  </script>
 ```
 
 
