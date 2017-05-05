@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no ">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="./bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./swiper.css">
+    <script type="text/javascript">
+      !(function (doc, win) {
+        var docEle = doc.documentElement,
+            evt = "onorientationchange" in window ? "orientationchange" : "resize",
+            fn = function () {
+                var width = docEle.clientWidth;
+                width && (docEle.style.fontSize = 16 * (width / 320) + "px");
+            };
+          win.addEventListener(evt, fn, false);
+          doc.addEventListener("DOMContentLoaded", fn, false);
+        }(document, window));
+    </script>
+    <style media="screen">
+      html {
+          height: 100%;
+      }
+      body {
+          height: 100%;
+          width: 100%;
+          position: relative;
+      }
+      .swiper-container {
+          height: 100%;
+          width: 100%;
+          background: #eee;
+      }
+      .swiper-pagination {
+          position: relative;
+          top: -100px;
+      }
+      .swiper-slide {
+          position: relative;
+          letter-spacing:1px;
+          height:100%;
+          width:100%;
+      }
+
+
+      /*向下按钮*/
+      #nextpage {
+          position: fixed;
+          top: 90%;
+          left: 45%;
+          z-index: 3000;
+          display: block;
+          height: 40px;
+          width: 40px;
+      }
+      .arr1 {
+          bottom: 40px;
+      }
+      .arr2 {
+          bottom: 50px;
+      }
+      .arrow {
+          display: block;
+          width: 20px;
+          height: 20px;
+          position: absolute;
+          left: 50%;
+          margin-left: -11px;
+          border: 3px solid transparent;
+          border-bottom: 3px solid #006a60;
+          border-right: 3px solid #006a60;
+          z-index: 99;
+          opacity: .8;
+          -webkit-transform: rotate(45deg);
+          -webkit-animation: arrow 1.5s infinite ease-in-out;
+      }
+      @-webkit-keyframes arrow {
+          0% {
+              opacity: 0;
+              -webkit-transform: translate(0, 0px) rotate(45deg);
+          }
+          50% {
+              opacity: 1;
+              -webkit-transform: translate(0, 5px) rotate(45deg);
+          }
+          100% {
+              opacity: 0;
+              -webkit-transform: translate(0, 10px) rotate(45deg);
+          }
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class=  "swiper-slide">
+              <p>1</p>
+            </div>
+            <div class="swiper-slide">
+              <p>2</p>
+            </div>
+            <div class="swiper-slide">
+              <p>3</p>
+            </div>
+            <div class="swiper-slide">
+              <p>4</p>
+            </div>
+        </div>
+        <div class="swiper-scrollbar"></div>
+        <a href="#" id="nextpage">
+            <div class="arrow arr1"></div>
+            <div class="arrow arr2"></div>
+        </a>
+    </div>
+
+
+
+
+
+
+
+    <script type="text/javascript" src="./jquery-3.2.0.min.js"></script>
+    <script type="text/javascript" src="./swiper.js"></script>
+    <script type="text/javascript">
+      var mySwiper = new Swiper('.swiper-container', {
+          direction: 'vertical',
+          loop: true,
+          nextButton: '.swiper-button-next',
+          scrollbar: '.swiper-scrollbar',
+          speed: 1000,
+          spaceBetween: 30,
+          mousewheelControl: true,
+      });
+
+      $('#nextpage').click(function() {
+          mySwiper.slideNext();
+      });
+    </script>
+  </body>
+</html>
