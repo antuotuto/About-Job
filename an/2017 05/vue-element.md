@@ -20,7 +20,7 @@
 
 * 企业中做模块化转型的时候也非常实用
 
-* [vue手机端 跨平台开发](https://weex.apache.org/cn/)
+* [vue手机端 weex跨平台开发](https://weex.apache.org/cn/)
 
 #### 3. 我的vue应用 开发人员 使用
 
