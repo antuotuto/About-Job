@@ -15,5 +15,3 @@
 ### React
 
   [react](http://www.react-cn.com/)
-
-### css
